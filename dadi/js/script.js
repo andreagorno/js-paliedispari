@@ -8,23 +8,36 @@
 // utente sceglie pari o dispari
 var firstChoice = prompt("Scegli tra pari o dispari");
 
-if (firstChoice != "pari" || firstChoice != "dispari") {
-    parseInt(prompt("Inserimento errato, per favore riprovare"));
-} else if (firstChoice == "pari" || firstChoice == "dispari") {
-    console.log("Hai scelto " + firstChoice);
+while (firstChoice != "pari" || firstChoice != "dispari") {
+    firstChoice = prompt("Selezione sbagliata, per favore inserisci una a scelta tra pari o dispari");
+    console.log(firstChoice);
 }
+console.log("Hai scelto " + firstChoice);
+// if (firstChoice != "pari" || firstChoice != "dispari") {
+//     alert("Inserimento errato, per favore riprovare");
+//     firstChoice = prompt("Scegli tra pari o dispari");
+// }
 
 // utente inserisce un numero da 1 a 5
 var secondChoice = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
-if (secondChoice < 1 || secondChoice > 5) {
-    parseInt(prompt("Inserimento errato, per favore riprovare"));
-} else if (isNaN(secondChoice)) {
-    parseInt(prompt("Inserimento errato, per favore riprovare"));
-} else if (secondChoice == "") {
-    parseInt(prompt("Inserimento errato, per favore riprovare"));
+while (secondChoice > 5 || secondChoice < 1) {
+    secondChoice = parseInt(prompt("Selezione sbagliata, per favore inserisci un numero compreso tra 1 e 5"));
+
+    secondChoice >= 5 || secondChoice <= 1;
 }
-console.log("Hai inserito il numero " + secondChoice);
+console.log("Hai scelto il numero " + secondChoice);
+// if (secondChoice < 1 || secondChoice > 5) {
+//     alert("Inserimento errato, per favore riprovare");
+//     secondChoice = parseInt(prompt("Inserisci un numero da 1 a 5"));
+// } else if (isNaN(secondChoice)) {
+//     alert("Inserimento errato, per favore riprovare");
+//     secondChoice = parseInt(prompt("Inserisci un numero da 1 a 5"));
+// } else if (secondChoice == "") {
+//     alert("Inserimento errato, per favore riprovare");
+//     secondChoice = parseInt(prompt("Inserisci un numero da 1 a 5"));
+// }
+// console.log("Hai inserito il numero " + secondChoice);
 
 // generare un numero random
 function generateNumber(min, max) {
